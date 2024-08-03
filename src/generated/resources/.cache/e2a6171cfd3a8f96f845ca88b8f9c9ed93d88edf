@@ -1,0 +1,6 @@
+// 1.20.1	2024-08-03T04:08:23.3835859	Tags for minecraft:block mod id industryplus
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/forge/tags/blocks/needs_netherite_tool.json
+e2027b2da3631b6f413b861b647c085eeff90cc2 data/minecraft/tags/blocks/mineable/pickaxe.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/needs_diamond_tool.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/needs_iron_tool.json
+e2027b2da3631b6f413b861b647c085eeff90cc2 data/minecraft/tags/blocks/needs_stone_tool.json
