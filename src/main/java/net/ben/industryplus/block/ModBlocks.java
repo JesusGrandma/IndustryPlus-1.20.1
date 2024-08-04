@@ -20,6 +20,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> LIMESTONE_BLOCK = registerBlock("limestone_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
+    public static final RegistryObject<Block> CRUSHER_BLOCK = registerBlock("crusher_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

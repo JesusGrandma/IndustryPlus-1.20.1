@@ -25,6 +25,7 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.STEEL_INGOT.get());
                         output.accept(ModItems.COKE.get());
                         output.accept(ModBlocks.LIMESTONE_BLOCK.get());
+                        output.accept(ModBlocks.CRUSHER_BLOCK.get());
 
 
                     })

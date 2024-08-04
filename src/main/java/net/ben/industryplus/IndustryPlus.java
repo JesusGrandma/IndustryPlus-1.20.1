@@ -2,8 +2,13 @@ package net.ben.industryplus;
 
 import com.mojang.logging.LogUtils;
 import net.ben.industryplus.block.ModBlocks;
+import net.ben.industryplus.block.entity.ModBlockEntities;
 import net.ben.industryplus.item.ModCreativeModTabs;
 import net.ben.industryplus.item.ModItems;
+import net.ben.industryplus.screen.CrusherBlockMenu;
+import net.ben.industryplus.screen.CrusherBlockScreen;
+import net.ben.industryplus.screen.ModMenuTypes;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -36,6 +41,9 @@ public class IndustryPlus
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
 
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -62,10 +70,11 @@ public class IndustryPlus
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
+    public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+
+            MenuScreens.register(ModMenuTypes.CRUSHER_BLOCK_MENU.get(), CrusherBlockScreen::new);
 
         }
     }

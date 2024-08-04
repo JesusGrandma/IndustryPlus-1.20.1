@@ -17,10 +17,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        //basic block
         blockWithItem(ModBlocks.LIMESTONE_BLOCK);
+
+        //advanced crusher block
+        simpleBlockWithItem(ModBlocks.CRUSHER_BLOCK.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/crusher_block")));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+
     }
 }
